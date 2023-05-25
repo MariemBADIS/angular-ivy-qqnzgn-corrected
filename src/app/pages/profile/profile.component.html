@@ -1,0 +1,7 @@
+<div *ngIf="user$" >
+  Bonjour, vous voici sur la page correspondant à votre profil utilisateur :
+
+  <div>email du profil : {{ (user$ | async)?.data?.email }}</div>
+  <div>nom du profil : "{{ (user$ | async)?.data?.first_name }}"</div>
+  <div>prénom du profil : "{{ (user$ | async)?.data?.last_name }}"</div>
+</div>
